@@ -6,9 +6,9 @@ CMock - Mock/stub generator for C
 Getting Started
 ================
 
-    > git clone --recursive https://github.com/throwtheswitch/cmock.git
+    > git clone https://github.com/throwtheswitch/cmock.git
     > cd cmock
-    > bundle install # Ensures you have all RubyGems needed
+    > bundle install --path=vendor # Ensures you have all RubyGems needed
     > bundle execute rake # Run all CMock library tests
 
 API Documentation

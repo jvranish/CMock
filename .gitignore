@@ -4,3 +4,6 @@ test/system/generated
 Gemfile.lock
 .rake_t_cache
 .DS_Store
+.bundle/
+vendor/cache/
+vendor/ruby/

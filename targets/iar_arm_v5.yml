@@ -37,8 +37,8 @@ compiler:
       - *unit_tests_path
       - *systest_mocks_path
       - 'src/'
-      - 'vendor/unity/src/'
-      - 'vendor/c_exception/lib/'
+      - '%{unity}/src/'
+      - '%{c_exception}/lib/'
       - 'iar\iar_v5\incIAR\'
       - 'test\system\test_compilation\'
       - 'test\'
@@ -49,7 +49,7 @@ compiler:
     prefix: '-o'
     extension: '.r79'
     destination: *systest_build_path
-    
+
 linker:
   path: [*tools_root, 'arm\bin\ilinkarm.exe']
   options:
@@ -65,7 +65,7 @@ linker:
     prefix: '-o'
     extension: '.out'
     destination: *systest_build_path
-    
+
 simulator:
   path: [*tools_root, 'common\bin\CSpyBat.exe']
   pre_support:

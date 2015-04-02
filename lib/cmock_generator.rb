@@ -22,16 +22,7 @@ class CMockGenerator
     @includes_c_pre_header       = (@config.includes_c_pre_header || []).map{|h| h =~ /</ ? h : "\"#{h}\""}
     @includes_c_post_header      = (@config.includes_c_post_header || []).map{|h| h =~ /</ ? h : "\"#{h}\""}
     
-    here = File.dirname __FILE__
-    unity_path_in_ceedling = "#{here}/../../unity" # path to Unity from within Ceedling
-    unity_path_in_cmock = "#{here}/../vendor/unity" # path to Unity from within CMock
-    if File.exist? unity_path_in_ceedling
-      require "#{unity_path_in_ceedling}/auto/type_sanitizer"
-    elsif File.exist? unity_path_in_cmock
-      require "#{unity_path_in_cmock}/auto/type_sanitizer"
-    else
-      raise "Failed to find an instance of Unity to pull in type_sanitizer module!"
-    end
+    require 'type_sanitizer'
     
   end
 

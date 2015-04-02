@@ -1,8 +1,9 @@
+require 'bundler/setup'
 require 'yaml'
 require 'fileutils'
-require '../vendor/unity/auto/unity_test_summary'
-require '../vendor/unity/auto/generate_test_runner'
-require '../vendor/unity/auto/colour_reporter'
+require 'unity_test_summary'
+require 'unity_generate_test_runner'
+require 'colour_reporter'
 
 module RakefileHelpers
 
@@ -10,7 +11,12 @@ module RakefileHelpers
 
   def load_configuration(config_file)
     $cfg_file = config_file
-    $cfg = YAML.load(File.read($cfg_file))
+    variables = {
+      unity: Gem.loaded_specs["unity"].gem_dir,
+      c_exception: Gem.loaded_specs["c_exception"].gem_dir,
+    }
+    contents = File.read($cfg_file) % variables
+    $cfg = YAML.load(contents)
     $colour_output = false unless $cfg['colour']
   end
 

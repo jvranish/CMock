@@ -7,3 +7,6 @@ gem "minitest"
 gem "require_all"
 gem "constructor"
 gem "diy"
+
+gem "unity"
+gem "c_exception"

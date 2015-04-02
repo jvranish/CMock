@@ -51,8 +51,8 @@ compiler:
       - *unit_tests_path
       - *systest_mocks_path
       - 'src/'
-      - 'vendor/unity/src/'
-      - 'vendor/c_exception/lib/'
+      - '%{unity}/src/'
+      - '%{c_exception}/lib/'
       - 'test/system/test_compilation/'
       - 'test/'
   defines:

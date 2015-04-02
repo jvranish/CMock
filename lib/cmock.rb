@@ -5,14 +5,15 @@
 # ==========================================
 
 [ "../config/production_environment",
-  "cmock_header_parser",
-  "cmock_generator",
-  "cmock_file_writer",
-  "cmock_config",
-  "cmock_plugin_manager",
-  "cmock_generator_utils",
-  "cmock_unityhelper_parser"].each {|req| require "#{File.expand_path(File.dirname(__FILE__))}/#{req}"}
+].each {|req| require "#{File.expand_path(File.dirname(__FILE__))}/#{req}"}
 
+require 'cmock_header_parser'
+require 'cmock_generator'
+require 'cmock_file_writer'
+require 'cmock_config'
+require 'cmock_plugin_manager'
+require 'cmock_generator_utils'
+require 'cmock_unityhelper_parser'
 
 $QUICK_RUBY_VERSION = RUBY_VERSION.split('.').inject(0){|vv,v| vv * 100 + v.to_i }
 

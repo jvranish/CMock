@@ -3,7 +3,7 @@
   - 'src/cmock.c'
   - 'test/c/TestCMockCDynamic.c'
   - 'test/c/TestCMockCDynamic_Runner.c'
-  - 'vendor/unity/src/unity.c'
+  - 'vendor/ruby/2.0.0/gems/unity-2.2.0/src/unity.c'
 :options:
   - 'TEST'
   - 'CMOCK_MEM_DYNAMIC'

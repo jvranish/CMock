@@ -39,8 +39,8 @@ compiler:
       - *unit_tests_path
       - *systest_mocks_path
       - 'src/'
-      - 'vendor/unity/src/'
-      - 'vendor/c_exception/lib/'
+      - '%{unity}/src/'
+      - '%{c_exception}/lib/'
       - 'test/system/test_compilation/'
       - 'test\'
   defines:
@@ -50,7 +50,7 @@ compiler:
     prefix: '-o'
     extension: '.r79'
     destination: *systest_build_path
-    
+
 linker:
   path: [*tools_root, 'common\bin\xlink.exe']
   options:
@@ -70,7 +70,7 @@ linker:
       - *systest_generated_path
       - *unit_tests_path
       - *systest_mocks_path
-      - 'vendor/unity/src/'
+      - '%{unity}/src/'
       - [*tools_root, 'arm\config\']
       - [*tools_root, 'arm\lib\']
   object_files:

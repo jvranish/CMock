@@ -31,8 +31,8 @@ compiler:
     items:
       - 'src/'
       - '../src/'
-      - '../vendor/unity/src/'
-      - '../vendor/unity/examples/example_3/helper/'
+      - '../vendor/ruby/2.0.0/gems/unity-2.2.0/src/'
+      - '../vendor/ruby/2.0.0/gems/unity-2.2.0/examples/example_3/helper/'
       - 'mocks/'
       - [*tools_root, 'arm\inc\']
       - *unit_tests_path
