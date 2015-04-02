@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # ==========================================
 #   CMock Project - Automatic Mock Generation for C
 #   Copyright (c) 2007 Mike Karlesky, Mark VanderVoord, Greg Williams

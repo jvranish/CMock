@@ -7,3 +7,4 @@ Gemfile.lock
 .bundle/
 vendor/cache/
 vendor/ruby/
+cmock-2.3.0.gem
